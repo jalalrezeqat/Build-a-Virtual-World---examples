@@ -38,6 +38,9 @@ class Search extends StatelessWidget {
                 style: TextStyle(color: Colors.white),
               ),
               color: Color(0xff4A1C35),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(7))
+              ),
             )
           ],
         ));

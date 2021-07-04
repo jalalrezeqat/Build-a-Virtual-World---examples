@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 
 class tableTybe extends StatelessWidget {
   tableTybe();
-  Color colorButtonEdit =Color(0xff19C955);
-  Color colorButtonDel =Color(0xffBA2020);
+
+  Color colorButtonEdit = Color(0xff19C955);
+  Color colorButtonDel = Color(0xffBA2020);
   Color fontButton = Colors.white;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -25,9 +27,23 @@ class tableTybe extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   // ignore: deprecated_member_use
-                  RaisedButton(onPressed: () {}, child: Text("Edit"),color: colorButtonEdit,textColor: fontButton,),
+                  RaisedButton(
+                    onPressed: () {},
+                    child: Text("Edit"),
+                    color: colorButtonEdit,
+                    textColor: fontButton,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(13))),
+                  ),
                   // ignore: deprecated_member_use
-                  RaisedButton(onPressed: () {}, child: Text("DEL"),color: colorButtonDel,textColor: fontButton,),
+                  RaisedButton(
+                    onPressed: () {},
+                    child: Text("DEL"),
+                    color: colorButtonDel,
+                    textColor: fontButton,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(13))),
+                  ),
                 ],
               ))),
             ]),

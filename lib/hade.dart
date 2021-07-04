@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'adduser.dart';
 
 class head extends StatelessWidget {
   head();
-
+  void selectScreen(BuildContext ctx){
+    Navigator.of(ctx).push(MaterialPageRoute(builder: (_){
+      return addUser();
+    }));
+  }
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,9 +21,14 @@ class head extends StatelessWidget {
               Text("Users Managemt"),
               // ignore: deprecated_member_use
               RaisedButton(
-                onPressed: () {},
+                onPressed: () {
+                  selectScreen(context);
+                },
                 child: Text("Add"),
                 color: Color(0xff19C955),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(13))
+                ),
               )
             ],
           )
